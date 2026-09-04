@@ -6,7 +6,7 @@ import {
     CONFIGS_KEY, GAME_MODE_KEY, PANEL_PLAYER_KEY, KEY_START,
     ROLE_IMPOSTOR, ROLE_TRIPULANTE, ROLE_COMPLICE, ROLE_DETECTIVE,
     ROLE_PARANOICO, ROLE_GEMELO, ROLE_GLITCH, ROLE_VIDENTE,
-    ROLE_POETA, ROLE_DESPISTADO, ROLES_DATA, ROLE_NARRADOR,
+    ROLE_POETA, ROLE_JUEZ, ROLE_DESPISTADO, ROLES_DATA, ROLE_NARRADOR,
     ROLE_LOBO, ROLE_LOBO_BLANCO, ROLE_ALDEANO, ROLES_LOBO_DATA,
     MODE_IMPOSTOR, MODE_LOBO, ROLE_LOBO_CACHORRO,
 } from './config.js';
@@ -659,7 +659,12 @@ export function revelarRol(player, palabraSecreta) {
             [ROLE_PARANOICO]: {
                 hint: "Uno de ellos es el impostor. El otro es un misterio.",
                 html: `${divPalabra}${generarBloquePista("Sospecha Dividida", (Array.isArray(data) ? `${data[0]?.name} / ${data[1]?.name}` : "???"))}`
-            }
+            },
+            [ROLE_JUEZ]: {
+                hint: "Una sola vez por partida, puedes ejecutar la Sentencia: expulsar a cualquier jugador en las votaciones, ignorando la mayoría.",
+                html: divPalabra
+            },
+
         };
 
         const rolContent = ROLES_STYLE[player.role] || ROLES_STYLE[ROLE_TRIPULANTE];

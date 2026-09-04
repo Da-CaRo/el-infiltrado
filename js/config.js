@@ -38,6 +38,7 @@ export const ROLE_VIDENTE = "VIDENTE";
 export const ROLE_GEMELO = "GEMELO";
 export const ROLE_DETECTIVE = "DETECTIVE";
 export const ROLE_GEMELO_EXTRA = "GEMELO_EXTRA";
+export const ROLE_JUEZ = "JUEZ";
 
 export const ROLES_DATA = [
     { id: ROLE_IMPOSTOR, name: "Impostor", icon: "💀", color: "red-500" },
@@ -50,7 +51,8 @@ export const ROLES_DATA = [
     { id: ROLE_DESPISTADO, name: "Despistado", icon: "😵‍💫", color: "orange-400" },
     { id: ROLE_GEMELO, name: "Gemelo", icon: "👯", color: "green-400" },
     { id: ROLE_POETA, name: "Poeta", icon: "✍️", color: "indigo-300" },
-    { id: ROLE_GEMELO_EXTRA, name: "2º Gemelo", icon: "➕", color: "green-400" }
+    { id: ROLE_GEMELO_EXTRA, name: "2º Gemelo", icon: "➕", color: "green-400" },
+    { id: ROLE_JUEZ, name: "Juez", icon: "🧑🏻‍⚖️", color: "amber-400" }
 ];
 
 // === IDENTIFICADORES DE ROLES LOBO ===
